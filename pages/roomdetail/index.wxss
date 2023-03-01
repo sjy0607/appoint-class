@@ -1,0 +1,65 @@
+/* pages/roomdetail/index.wxss */
+.page-body{
+  width: 100%;
+  height:400rpx;
+}
+.swipper{
+  height:100%;
+  width: 100%;
+}
+.card{
+  background-color: #333;
+  padding:32rpx;
+  display: flex;
+  flex-direction: row;
+  height:136rpx;
+  border-radius: 20rpx;
+}
+.card-icon{
+  width:72rpx;
+  height:72rpx;
+}
+.purchase{
+  padding:15rpx 61rpx;
+  /* width:48rpx; */
+  /* height:54rpx; */
+  border: 1px solid #fff;
+  border-radius: 50rpx;
+  /* line-height: 24rpx; */
+  /* text-align: center; */
+  /* vertical-align: middle; */
+}
+.room-btm{
+  background-color: #fff;
+  padding:32rpx 24rpx 0 24rpx;
+}
+.room-icon{
+  width:48rpx;
+  height:48rpx;
+}
+.room-notice{
+  width:712rpx;
+}
+.active{
+  background-color:white;
+  color:black;
+  border-radius: 50rpx;
+  font-size: 24rpx;
+}
+.submit{
+  width:626rpx;
+  border-radius: 50rpx;
+  padding:26rpx 0;
+  /* padding:26rpx 241rpx; */
+  color:#ffffff;
+  background-color:#333333 ;
+  /* display: flex;
+  justify-items: center; */
+  text-align: center;
+  /* position: fixed;
+  /* bottom: 32rpx; */
+  margin-left:50%;
+  margin-bottom: 67rpx;
+  margin-top:60rpx ;
+  transform: translateX(-50%);
+}

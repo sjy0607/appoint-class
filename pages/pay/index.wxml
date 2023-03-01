@@ -1,0 +1,67 @@
+<!--pages/pay/index.wxml-->
+<view class="wrap">
+    <view class="bg-white appoint">
+        <view class="bold size-16">您已预约</view>
+        <view class="o-hide">
+            <view class="appoint-time flex-column flex" wx:for="{{infoList}}" wx:key bindtap="closeContain" data-id="{{item.periodId}}">
+                <view class="size-12">{{item.amPm}}</view>
+                <view class="color-gray1 size-12 mtop_8">{{item.date}}</view>
+                <view class="color-gray2 size-14 mtop_8">{{item.time}}</view>
+                <view class="size-16 color-gray size-16 mtop_8">￥{{item.price}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="mtb-12">
+        <view class="plb-12 flex bg-white flex-middle">
+            <!-- <view> -->
+            <image src="/images/home_icon_card@3x.png" class="pay-icon"></image>
+            <!-- </view> -->
+            <view class="flex-between flex1 mlef-12">
+              <view class="color-gray">次卡折扣</view>
+              <view class="color-gray2" bindtap="useCard">{{select_card_id?select_name:'不使用次卡'}}></view>
+            </view>
+            
+        </view>
+        <view class="plb-12 flex bg-white flex-middle mt-2">
+            <!-- <view> -->
+                <image src="/images/tab_icon_member_normal@3x.png" class="pay-icon"></image>
+            <!-- </view> -->
+            <view class="flex-between flex1 mlef-12">
+                <view class="color-gray">会员优惠</view>
+                <view class="color-yellow">-￥{{discountPrice}}</view>
+            </view>
+            
+        </view>
+    </view>
+    <view class="plb-12  bg-white flex-center">
+            <!-- <view> -->
+                <image src="/images/rooms/car_pay_icon_weixin@3x.png" class="pay-icon"></image>
+            <!-- </view> -->
+            <view class="flex-between flex1 mlef-12">
+                <view class="color-gray">微信支付</view>
+                <!-- <view bindtap="selectPay">
+                    <image src="/images/rooms/car_pay_icon_tick@3x.png" class="pay-icon" wx:if="{{isWxin}}"></image>
+                    <view class="checkbox"  wx:else></view>
+                </view> -->
+            </view>
+            
+    </view>
+    <view class="">
+        <view class="plb-12">退订说明</view>
+        <view class="plr-12">
+            <view class="color-gray2 size-12">
+               <text>1、预约时间开始6个小时前可取消预订，系统可自动全额退款。</text>
+              
+              <view class="mtb-12">2、距离预约开始时间6小时的情况下，不可取消预约的订单，以及</view>
+              <text>不支持退款。敬请谅解~</text>
+
+              
+            </view>
+        </view>
+    </view>
+    <view class="flex flex-between btm-appoint">
+            <view class="size-25 bold mlef-12">￥{{price}}</view>
+            <view class="pay" bindtap="pay">立即支付</view>
+    </view>
+    <back></back>
+</view>

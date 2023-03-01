@@ -1,0 +1,51 @@
+/* pages/cardsDiscount/index.wxss */
+.max{
+  background-color: #333333 ;
+}
+.middle{
+  background-color:#7F7F7F ;
+}
+.small{
+  background-color:#F5F5F5;
+}
+.rooms{
+  position: relative;
+  height:297rpx;
+  width:582rpx;
+  margin:24rpx 0;
+  border-radius: 30rpx;
+  padding:24rpx;
+}
+.room-img{
+  width:254rpx;
+  height:114rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* 向左向上平移自身宽高的50% */
+}
+.room-btm{
+  margin-top: 140rpx;
+  display: flex;
+  align-items: flex-end;
+}
+.weui-cell__hd{
+  margin-left: 10rpx;
+}
+.btm{
+  padding:26rpx 110rpx;
+  border-radius: 50rpx;
+  border: 1px solid #999999;
+  color:#999999;
+}
+.active{
+  background-color: #333333;
+  color:white;
+  font-weight: bold;
+  border:1px solid #333333;
+}
+/* .tip-img{
+  width:402rpx;
+  height:402rpx;
+  margin-top: 80rpx;
+} */

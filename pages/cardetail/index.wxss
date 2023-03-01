@@ -1,0 +1,50 @@
+/* pages/cardetail/index.wxss */
+.rooms{
+  position: relative;
+  height:297rpx;
+  margin:24rpx 0;
+  border-radius: 30rpx;
+  padding:24rpx;
+}
+.max{
+  background-color: #333333 ;
+}
+.middle{
+  background-color:#7F7F7F ;
+}
+.small{
+  background-color:#F5F5F5;
+}
+.room-img{
+  width:254rpx;
+  height:114rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* 向左向上平移自身宽高的50% */
+}
+.room-btm{
+  margin-top: 140rpx;
+  display: flex;
+  align-items: flex-end;
+}
+.pay-icon{
+  width:46rpx;
+  height:46rpx;
+}
+.pay{
+  background-color: #333;
+  font-size: 36rpx;
+  padding:26rpx 138rpx;
+  color:#fff;
+  border-radius: 50rpx;
+}
+.notice{
+  width:702rpx;
+  height:660rpx;
+}
+.member-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,74 @@
+/* pages/person/index.wxss */
+.person-time{
+  width:50%;
+  justify-items: center;
+}
+.bt-note{
+  margin-top: 16rpx;
+}
+.person-order{
+  background-color: #ffffff;
+  height:230rpx;
+  padding:32rpx;
+}
+.order-status{
+  display: flex;
+  align-items: flex-start;
+  margin-top: 54rpx;
+}
+.status-img{
+  width:54rpx;
+  height:54rpx;
+}
+.order-item{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.goon{
+  margin:0 116rpx;
+}
+.mt-13{
+  margin-top: 26rpx;
+}
+.person-packet{
+  padding:32rpx 24rpx;
+  background-color: #ffffff;
+}
+.packet-right{
+  width:160rpx;
+  height:104rpx;
+}
+.packet-item{
+  padding:32rpx;
+  border-radius: 10rpx;
+}
+
+.small-level{
+  background-color:#F5F5F5;
+  
+}
+.middle-level{
+  background-color:#7F7F7F;
+}
+.max-level{
+  background-color:#333333;
+}
+.hour{
+  margin-top: 40rpx;
+}
+.mt-9{
+  margin-top: 9rpx;
+}
+.number-note{
+  position: absolute;
+  width:36rpx;
+  height:36rpx;
+  border-radius: 100rpx;
+  color:white;
+  background-color: #ff6f00;
+  right:-18rpx;
+  top:-18rpx;
+  font-size: 24rpx;
+  text-align: center;
+}

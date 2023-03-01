@@ -1,0 +1,14 @@
+/* pages/roomlist/index.wxss */
+.room-item{
+  padding:24rpx;
+}
+.room-img{
+  height:280rpx;
+  width:712rpx;
+  border-radius: 40rpx;
+}
+.list-btm{
+  position: absolute;
+  bottom: 32rpx;
+  left:32rpx;
+}

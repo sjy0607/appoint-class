@@ -1,0 +1,104 @@
+<!--pages/cardetail/index.wxml-->
+<view class="wrap">
+      <view wx:if="{{info.type==2}}" class="mlr-12">   
+            <view class="rooms max">
+              <image src="/images/rooms/class_max_car_logo@2x.png" class="room-img"></image>
+              <view class="flex-between flex color">
+                    <view>
+                          <view class="color">MAX</view>
+                          <view>
+                              <text class="size-12">适用教室  大</text>
+                          </view>
+                    </view>
+                    <view class="color">￥{{info.price}}</view>
+              </view>
+              <view class="flex-between flex color room-btm size-12">
+                    <view>可用  {{info.hours}}小时</view>
+                    <view class="color-gray1 text-right">
+                      <view>有限期至{{info.expiresTime}}</view>
+                      <view>购买成功后{{info.expiresDays}}天有效</view>
+                    </view>
+
+                </view>
+            </view>
+      </view>
+      <view wx:elif="{{info.type==1}}" class="mlr-12">
+            <view class="rooms middle">
+                <image src="/images/rooms/class_middle_car_logo@3x.png" class="room-img"></image>
+                <view class="flex-between flex color">
+                      <view>
+                            <view class="color">MIDDLE</view>
+                            <view>
+                                <text class="size-12">适用教室  中</text>
+                            </view>
+                      </view>
+                      <view class="color">￥{{info.price}}</view>
+                  </view>
+                  <view class="flex-between flex color room-btm size-12">
+                      <view>可用  {{info.hours}}小时</view>
+                      <view class="color text-right">
+                        <view>有限期至{{info.expiresTime}}</view>
+                        <view>购买成功后{{info.expiresDays}}天有效</view>
+                      </view>
+                  </view>
+            </view>
+      </view>
+      <view wx:else class="mlr-12">
+            <view class="rooms small">
+                  <image src="/images/rooms/class_small_car_logo@3x.png" class="room-img"></image>
+                  <view class="flex-between flex color-gray">
+                      <view>
+                            <view class="bold">SMALL</view>
+                            <view>
+                                <text class="size-12">适用教室  小</text>
+                            </view>
+                      </view>
+                      <view class="bold">￥{{info.price}}</view>
+                  </view>
+                  <view class="flex-between flex color room-btm size-12">
+                      <view class="color-gray1">可用  {{info.hours}}小时</view>
+                      <view class="color-gray text-right">
+                        <view>有限期至{{info.expiresTime}}</view>
+                        <view>购买成功后{{info.expiresDays}}天有效</view>
+                      </view>
+                  </view>
+          </view>
+      </view>
+      <!-- <view>
+        <view></view>
+            
+      </view> -->
+      <view class="plb-12">
+        <!-- <view class="mbot_10 member-title">
+          <image src="/images/rooms/car_icon_ong@3x.png" class="pay-icon"></image>
+          <text class="mlr-12 bold">会员卡规则</text>
+          <image src="/images/rooms/car_icon_ong@3x.png" class="pay-icon"></image>
+        </view>
+        <image src="/images/rooms/car_member_img@3x.png" class="notice"></image> -->
+      </view>
+      <view class="bg-white">
+          <view class="plb-12 flex bb">
+              <view>
+                  <image src="/images/rooms/tab_icon_member_normal@3x.png" class="pay-icon"></image>
+              </view>
+              
+              <view class="flex-between mlef-12 flex flex1">
+                  <view>会员优惠</view>
+                  <view class="color-yellow">-￥{{discountPrice}}</view>
+              </view>
+          </view>
+          <view class="plb-12 flex bb">
+              <view>
+                <image src="/images/rooms/car_pay_icon_weixin@3x.png" class="pay-icon"></image>
+              </view>
+              <view class="flex-between mlef-12 flex flex1">
+                  <view>微信支付</view>
+                  <image src="/images/rooms/car_pay_icon_tick@3x.png" class="pay-icon"></image>
+              </view>
+          </view>
+          <view class="plb-12 flex flex-between">
+                <view class="size-25 bold">￥{{price}}</view>
+                <view class="pay" bindtap="pay">立即支付</view>
+          </view>
+      </view>
+</view>

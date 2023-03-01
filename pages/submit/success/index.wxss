@@ -1,0 +1,14 @@
+/* pages/submit/success/index.wxss */
+
+.tip{
+  max-width:402rpx;
+  margin:50rpx 0 60rpx 0;
+}
+/* .tip-button{
+  color:#fff;
+  background-color: #333;
+  padding:26rpx 110rpx;
+  font-size: 36rpx;
+  border-radius: 50rpx;
+  text-align: center;
+} */

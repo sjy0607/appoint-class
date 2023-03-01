@@ -1,0 +1,10 @@
+/* components/cm-return.wxss */
+.bt-return{
+  position:fixed;
+  right:24rpx;
+  bottom:154rpx;
+}
+.icon-return{
+  width:116rpx;
+  height:116rpx;
+}

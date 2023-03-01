@@ -1,0 +1,73 @@
+<!--pages/startappoint/index.wxml-->
+<view>
+    <view class="flex room-name bb flex-between" bindtap="toClassroom">
+      <view>
+          <view class="bold size-16">{{title}}</view>
+          <view class="color-gray1 mtop_8 size-12">{{address}}</view>
+      </view>
+      <view class="color-gray1" >
+          >
+      </view>
+    </view>
+    
+    <view class="date plr-12">
+          <view class="flex center ptb-20">
+              <image src="/images/next_left.png" style="width:60rpx;height:60rpx;margin-left:10rpx;" bindtap="preMonth"></image>
+              <text>{{year}}年{{sysmonth}}月</text>
+              <image src="/images/next_right.png" style="width:60rpx;height:60rpx;margin-left:10rpx;" bindtap="nextMonth"></image>
+          </view>
+          <scroll-view class="scroll-view" scroll-left="{{scrollLeftIndex*46}}" scroll-x scroll-with-animation>
+              <view class='item {{index==clickIndex?"day-active":""}}'  wx:for="{{dateList}}" data-index='{{index}}' bindtap='clickDate'>
+                <view class='text-view'>
+                  <view wx:if="{{item.month == sysmonth && item.day == nowDate}}">
+                    <text class='week'>今日</text>
+                  </view>
+                  <view wx:else>
+                    <text class='week'>周{{item.week}}</text>
+                  </view>
+                  <view class='day bold'>{{item.day}}</view>
+                 
+                </view>
+              </view>
+        </scroll-view>
+    </view>
+    <view class="selected-data plr-12">
+          <view class="mtb-20">
+            <image src="/images/order_notice@3x.png" style="width:28rpx;height:28rpx;margin-right:16rpx;"></image>
+            <text class="color-gray1 size-12">已选日期{{currentDate}}，选择以下时间段可预约</text>
+          </view>
+          <view>
+            <swiper indicator-dots="{{indicatorDots}}" indicator-color="#BDC4CE" indicator-active-color="#ffffff" class="swipper">
+                <block wx:for="{{list}}" wx:key>
+                  <swiper-item style="display: flex;flex-wrap: wrap;flex-direction: row;">
+                      <view wx:for="{{item}}" wx:key>
+                          <view class="{{item.usable==0?'disable-style':''}} time-interval" bindtap="selectTime" data-item="{{item}}">
+                                <view class="{{item.usable==0?'color-gray3':'color-gray1'}} size-12">{{item.amPm}}</view>
+                                <view class="{{item.usable==0?'color-gray3':'color-gray1'}} size-12 mbot_5">{{item.time}}</view>
+                                <view class="{{item.usable==0?'color-gray3':'color-gray1'}} size-14">￥{{item.price}}</view>
+                          </view>
+                      </view>
+                  </swiper-item>
+                </block>
+            </swiper>
+          </view>
+    </view>
+    <view class="plr-12">
+        <text>您已预约</text>
+        <view style="display: flex;flex-wrap: wrap;flex-direction: row;">
+            <view class="appoint-time flex-column flex" wx:for="{{selectInfo}}" wx:key>
+                  <view class="size-12">{{item.amPm}}</view>
+                  <view class="color-gray1 size-12 mtop_8">{{item.date}}</view>
+                  <view class="color-gray2 size-14 mtop_8">{{item.time}}</view>
+                  <view class="size-16 color-gray size-16 mtop_8">{{item.price}}</view>
+                  <image src="/images/order_icon_fock@3x.png" class="close" bindtap="closeContain" data-id="{{item.periodId}}"></image>
+            </view>
+        </view>
+        
+    </view>
+    <view class="submit" bindtap="submit">
+
+          立即预定
+   </view>
+   <back></back>
+</view>

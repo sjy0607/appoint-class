@@ -1,0 +1,39 @@
+<!--pages/appoint/success/index.wxml-->
+<view class="wrap">
+    <view wx:if="{{imgUrl}}">
+      <view class="success flex-center flex-column">
+            <view>
+              <view class="size-18 color-gray">恭喜您，预定成功</view>
+              <view class="color-gray1 size-14 note">请携带核销码在有限期内前</view>
+              <view>
+                  <image src="{{imgUrl}}" class="code"></image>
+              </view>
+            </view>
+            <view class="center">
+                <view>
+                  <text class="color-gray1">核销码自动</text>
+                  <text class="color-gray" bindtap="refresh">刷新</text>
+                </view>
+                <view>
+                  <image src="/images/order_icon_refur@3x.png" class="refresh"></image>
+                </view>
+
+                
+          
+              
+            </view>
+          </view>
+          <view class="confirm">
+
+                <view class="bottom-btn active">确定</view>
+                <view class="bottom-btn mt-12" open-type="share">分享好友</view>
+              
+              
+          </view>
+    </view>
+    <view  class="empty bg-white flex-column" wx:else>
+      <image src="/images/order_empty_on@3x.png" class="tip-img"></image>
+      <view class="mtb-20 size-14 color-gray">开始15分钟前显示二维码</view>
+      <view class="tip-button" bindtap="toPurchase">返回</view>
+    </view>
+</view>

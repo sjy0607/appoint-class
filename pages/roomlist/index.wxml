@@ -1,0 +1,18 @@
+<!--pages/roomlist/index.wxml-->
+<view class="wrap room-item">
+  <view wx:for="{{roomlist}}" wx:key class="relative" bindtap="toRoomDetail" data-id="{{item.id}}">
+      <image src="{{item.imgUrl}}" class="room-img" mode="center"></image>
+      <view class="flex-column list-btm">
+          <view class="color size-16">
+            {{item.title}}
+          </view>
+          <view class="color size-12 mtop_8">
+            {{item.address}}
+          </view>
+      </view>
+      <!-- <view class="size-12 color-gray1 text-center ptb-16" wx:if="{{isBottom}}">已经到底了</view> -->
+  </view>
+  <view wx:if="{{!roomlist.length}}" class="center">
+      没有教室
+  </view>
+</view>

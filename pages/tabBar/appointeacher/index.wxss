@@ -1,0 +1,38 @@
+/* pages/appoint/index.wxss */
+
+.teacher-item{
+  padding:35rpx;
+  background-color: #ffffff;
+  margin-bottom: 6rpx;
+}
+.teacher-avatar{
+  width:90rpx;
+  height:90rpx;
+}
+.teacher-right{
+  margin-left: 28rpx;
+}
+.teacher-bottom{
+  display: flex;
+  margin-top: 39rpx;
+  align-items: flex-end;
+  justify-content:space-between;
+  
+}
+.appoint{
+  background-color: #333333;
+  color:#ffffff;
+  border-radius: 50rpx;
+  font-size: 24rpx;
+  padding:15rpx 51rpx;
+  /* width:180rpx !important; */
+  /* margin:0 !important; */
+  /* padding:0; */
+}
+.teacher-resign{
+  position: fixed;
+  right:0;
+  bottom: 40rpx;
+  width:116rpx;
+  height:116rpx;
+}

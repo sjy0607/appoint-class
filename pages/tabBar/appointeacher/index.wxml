@@ -1,0 +1,24 @@
+<!--pages/appoint/index.wxml-->
+<view class="bg">
+    <view wx:for="{{teachers}}" wx:key class="flex teacher-item" data-id='{{item.teacherId}}' bindtap="toAppoint">
+        <view>
+            <image src="{{item.avatarImgUrl}}" class="teacher-avatar"></image>
+        </view>
+        <view class="flex1 flex-column teacher-right">
+            <view class="flex-column">
+              <text class="bold size-18">{{item.name}}</text>
+              <text class="color-gray size-14 mtop_10">{{item.description}}</text>
+              <text class="color-gray size-14">{{item.desc2}}</text>
+            </view>
+            <view class="teacher-bottom">
+                <view class="color-gray1 size-12">已被预约 {{item.reservationTimes}} 次</view>
+                <view class="appoint">预约</view>
+            </view>
+        </view>
+        
+    </view>
+    <view class="size-12 color-gray1 text-center ptb-16" wx:if="{{isBottom}}">已经到底了</view>
+    <view>
+          <image src="/images/teacher/order_window@3x.png" class="teacher-resign" bindtap="toAppointTeacher"></image>
+    </view>
+</view>

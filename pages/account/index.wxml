@@ -1,0 +1,4 @@
+<!--pages/account/index.wxml-->
+<view class="wrap">
+ <web-view src="{{url}}"></web-view>
+</view>

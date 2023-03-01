@@ -1,0 +1,73 @@
+<!--pages/roomdetail/index.wxml-->
+<view class="wrap">
+    <view class="page-body relative">
+      <video src="{{info.videoUrl}}" class="swipper" wx:if="{{info.videoUrl&&currentIndex==0}}"></video>
+      <swiper indicator-dots="{{indicatorDots}}" indicator-color="#BDC4CE" indicator-active-color="#ffffff"
+        autoplay="{{autoplay}}" class="swipper" wx:else>
+        <block wx:for="{{info.imgUrls}}" wx:key>
+          <swiper-item>
+            <image src="{{item}}" style="width:100%" mode="widthFix"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="switch-button" wx:if="{{info.videoUrl&&info.imgUrls.length}}">
+        <view class="flex">
+            <view class="switch {{currentIndex==0?'active':''}}" bindtap="switchChange" data-index="0">视频</view>
+            <view class="switch {{currentIndex==1?'active':''}}" bindtap="switchChange" data-index="1">图片</view>
+        </view>
+      </view>
+    </view>
+    <view class="mlr-12">
+            <view class="plb-12">{{info.title}}</view>
+            <view class="plr-12 card flex-middle">
+                <view>
+                    <image src="/images/rooms/dancepar_icon_card@3x.png" class="card-icon"></image>
+                </view>
+                <view class="flex flex-between flex1 mlef-12">
+                    <view>
+                      <view class="color size-16">购买次卡</view>
+                      <text class="color size-12">教室专属预约次卡</text>
+                    </view>
+                    <view class="color purchase" bindtap="toBuy">购买</view>
+                </view>
+                
+            </view>
+    </view>
+    <view class="room-btm">
+        <view class="flex flex-between">
+              <view>
+                  <view class="bold size-16 color-gray">地址</view>
+                  <text class="color-gray1 size-14">{{info.address}}</text>
+              </view>
+              <view>
+                  <image src="/images/rooms/dancepar_icon_addre@3x.png" class="room-icon" bindtap="toMap"></image>
+              </view>
+        </view>
+        <view class="flex flex-between mt-12">
+              <view>
+                  <view class="bold size-16 color-gray">联系电话</view>
+                  <text class="color-gray1 size-14">{{info.phone}}</text>
+              </view>
+              <view>
+                  <image src="/images/rooms/dancepar_icon_phone@3x.png" class="room-icon" bindtap="toCall"></image>
+              </view>
+        </view>
+        <view class="mt-12">
+            <view class="bold size-16 mbot_5">场地介绍</view>
+            
+            <view>
+                <view class="size-14 color-gray1 mbot_5">{{info.description}}</view>
+            </view>
+            <view class="submit" bindtap="toAppoint">
+              去预定
+            </view>
+            <!-- <image src="/images/rooms/calss_place_img@3x.png" class="room-notice"></image>
+            <view class="bold size-16 mtb-12">!注意事项</view>
+            <image src="/images/rooms/calss_notice_img@3x.png" class="room-notice"></image>
+            <view class="bold size-16 mtb-12">使用指南</view>
+            <image src="/images/rooms/dancepar_guide_img@3x.png" class="room-notice"></image> -->
+        </view>
+        
+    </view>
+    <back></back>
+</view>

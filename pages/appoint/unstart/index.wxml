@@ -1,0 +1,22 @@
+<!--pages/appoint/unstart/index.wxml-->
+<view class="wrap">
+    <view class="page-contain">
+       <view class="room-type">
+            <view class="size-18 bold color-gray">{{info.title}}</view>
+            <view class="color-gray1 size-14 address">{{info.address}}</view>
+            <text class="color-yellow underline mbot_20">查看地图</text>
+            <view class="interval"><text>{{info.time}}</text><text> {{info.type==1?'未开始':((info.type==2)?'进行中':'已完成')}}</text></view>
+       </view>
+       <view class="bg-white unstart-time">
+              <view class="size-14 color-gray1 mbot_20">
+               {{info.type==1?'未开始':((info.type==2)?'进行中':'已完成')}}
+              </view>
+              <text class="color-gray2 size-20 bold">{{lastTime}}</text>
+       </view>
+       <view class="flex-center flex bottom">
+            <!-- <view class="btn">开/关灯</view> -->
+             <view class="btn1 active" bindtap="openDoor">开门码</view>
+       </view>
+  </view>
+  
+</view>

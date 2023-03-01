@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class="bg">
+  <view class="page-body">
+      <swiper indicator-dots="{{indicatorDots}}" indicator-color="#BDC4CE" indicator-active-color="#ffffff"
+        autoplay="{{autoplay}}" class="swipper">
+        <block wx:for="{{homeBanner}}" wx:key>
+          <swiper-item>
+            <image src="{{item.imgUrl}}" bindtap=""  mode='widthFix' style="width:100%"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
+  <!-- <view class="home-card"> -->
+  <view class="home-card-center">
+      <view class="card-top">
+        <view wx:for="{{cardList}}" wx:key class="width_50 center flex-column" bindtap="appointRoom" data-id="{{item.id}}">
+              <view>
+                <image class="card-img" src="{{item.url}}"></image>
+              </view>
+              <view class="flex-column text-center">
+                <text class="size-18 bold">{{item.name}}</text>
+                <text class="size-12">{{item.note}}</text>
+              </view>
+        </view>
+      </view>
+      <view class="card-bottom">
+          <view class="">
+            <image src="/images/home_icon_card@3x.png" class="packet"></image>
+          </view>
+          <view class="btm-right">
+            <view>
+              <text class="size-18 bold">购买次卡</text>
+              <text class="note">
+                教室专属预约次卡
+              </text>
+            </view>
+            <view>
+              <button class="btn" bindtap="getUserProfile">购买</button>
+            </view>
+          </view>
+         
+      </view>
+  
+  </view>
+  <view class="home-msg">
+     <view class="size-18 bold ptb-20">最新资讯</view>
+     <view wx:for="{{latestMsg}}" class="img-banner" wx:key bindtap="toAccount" data-url="{{item.link}}">
+          <!-- <view > -->
+              <image src="{{item.imgUrl}}" class="img">
+              </image>
+              <view class="bottom">
+                  <text>{{item.title}}</text>
+              </view>
+          <!-- </view> -->
+          
+     </view>
+  </view>
+  <!-- </view> -->
+</view>

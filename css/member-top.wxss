@@ -1,0 +1,26 @@
+.avatar{
+  width:114rpx;
+  height:114rpx;
+  border-radius: 100rpx;
+}
+.member-top{
+  height:287rpx;
+  padding:32rpx;
+  border-radius: 20rpx;
+  background: linear-gradient(#F1F1F1, #C0C2B8,#DDDFD5,#DDDFD5,#F3F4EF);
+}
+
+.member-righ{
+  width:200rpx;
+  height:128rpx;
+}
+.member-note{
+  padding:13rpx  22rpx;
+  background-color: #333333;
+  color:#ffffff;
+  border-radius: 50rpx;
+  line-height: 24rpx;
+  font-size: 24rpx;
+  width:140rpx !important;
+  margin-left: 0 !important;
+}

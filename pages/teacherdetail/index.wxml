@@ -1,0 +1,56 @@
+<!--pages/teacherdetail/index.wxml-->
+<view class="wrap bg-white">
+    <view class="page-body relative">
+      <video src="{{info.videoUrl}}" class="swipper" wx:if="{{info.videoUrl&&currentIndex==0}}"></video>
+      <swiper indicator-dots="{{indicatorDots}}" indicator-color="#BDC4CE" indicator-active-color="#ffffff"
+        autoplay="{{autoplay}}" class="swipper" wx:else>
+        <block wx:for="{{info.imgUrls}}" wx:key>
+          <swiper-item>
+            <image src="{{item}}" style="width:100%" mode="widthFix"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="switch-button" wx:if="{{info.videoUrl&&info.imgUrls.length}}">
+        <view class="flex">
+            <view class="switch {{currentIndex==0?'active':''}}" bindtap="switchChange" data-index="0">视频</view>
+            <view class="switch {{currentIndex==1?'active':''}}" bindtap="switchChange" data-index="1">图片</view>
+        </view>
+      </view>
+    </view>
+    <view class="flex detail bg-white">
+          <view>
+              <image src="{{info.avatarImgUrl}}" class="detail-avatar"></image>
+          </view>
+          <view class="mlef-14 flex-between flex1 flex-middle">
+            <view>
+              <view  class="size-16 color-gray">{{info.name}}</view>
+              <text class="size-14 color-gray1">已被预约 {{info.reservationTimes}} 次</text>
+            </view>
+            <view class="color-yellow bold">
+              ￥{{info.price}}/小时
+            </view>
+          </view>
+          
+    </view>
+    <view class="teacher-intro bt">
+        <view class="size-16 color-gray bold mbot_16">老师介绍</view>
+        <text class="size-14 color-gray line_h">
+          {{info.description}}
+          <!-- 2018年成为Artcrew队员 
+          2018年参加南昌高校联盟齐舞比赛第二名2019年参加财
+          经大学齐舞比赛第三名2019年考入王泽老师urban团
+          Swagz2019年参加华东炫舞齐舞比赛第二名 
+          2019年考入南昌莎曼迪SummerDance黄蓉老师爵士团
+          FLAWLESS 
+          可预约时间段为星期一星期四晚上七点半或七点半之后以及星期六上午都可以
+          周六下午一点到四点半 -->
+        </text>
+        <view class="color-yellow bold size-25 mtop_16">
+          {{info.specialDescription}}
+<!-- 可预约时间段
+周一~周四19：30
+周六上午~下午四点半 -->
+        </view>
+        <view class="go-appoint mt-12 mlef-18" bindtap="getUserProfile">立即预约</view>     
+    </view>
+</view>

@@ -1,0 +1,4 @@
+<!--components/cm-return.wxml-->
+<view class="bt-return">
+    <image src="../../images/order_home@3x.png" class="icon-return" bindtap="toBack"></image>
+</view>

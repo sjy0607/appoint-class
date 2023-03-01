@@ -1,0 +1,24 @@
+/* pages/myorder/index.wxss */
+
+.tab{
+  border-radius: 50rpx;
+  padding:18rpx 34rpx;
+  font-size: 24rpx;
+  margin-right:24rpx ;
+}
+
+.order-item{
+    background-color: #fff;
+    padding:32rpx;
+}
+.address{
+  margin:16rpx 0 32rpx 0;
+}
+.search{
+  padding:16rpx 43rpx;
+  font-size: 28rpx;
+  border:1px solid #999999;
+  color:#999999;
+  border-radius: 50rpx;
+  margin-right: 10rpx;
+}

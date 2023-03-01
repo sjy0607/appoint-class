@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/tabBar/index/index",
+    "pages/tabBar/member/index",
+    "pages/tabBar/person/index",
+    "pages/tabBar/appointeacher/index",
+    "pages/teacherdetail/index",
+    "pages/logs/logs",
+    "pages/teacherResign/index",
+    "pages/room/index",
+    "pages/dancelist/index",
+    "pages/pay/index",
+    "pages/submit/message/index",
+    "pages/appoint/success/index",
+    "pages/appoint/unstart/index",
+    "pages/submit/success/index",
+    "pages/cardsDiscount/index",
+    "pages/myorder/index",
+    "pages/cardetail/index",
+    "pages/roomdetail/index",
+    "pages/roomlist/index",
+    "pages/startappoint/index",
+    "pages/dancedetail/index",
+    "pages/allCards/index",
+    "pages/map/index",
+    "components/back/back",
+    "pages/account/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "练习室",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7F8389",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/tabBar/index/index",
+        "text": "首页",
+        "iconPath": "images/tab_icon_home_mormal@3x.png",
+        "selectedIconPath": "images/tab_icon_home_press@3x.png"
+      },
+      {
+        "pagePath": "pages/tabBar/member/index",
+        "text": "会员",
+        "iconPath": "images/tab_icon_member_normal@3x.png",
+        "selectedIconPath": "images/tab_icon_member_press@3x.png"
+      },
+      {
+        "pagePath": "pages/appoint/success/index",
+        "iconPath": "images/tab_icon_planarr_normal@3x.png",
+        "selectedIconPath": "images/tab_icon_planarr_normal@3x.png"
+      },
+      {
+        "pagePath": "pages/tabBar/appointeacher/index",
+        "text": "预约老师",
+        "iconPath": "images/tab_icon_order_normal@3x.png",
+        "selectedIconPath": "images/tab_icon_order_press@3x.png"
+      },
+      {
+        "pagePath": "pages/tabBar/person/index",
+        "text": "个人中心",
+        "iconPath": "images/tab_icon_per_normal@3x.png",
+        "selectedIconPath": "images/tab_icon_per_press@3x.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

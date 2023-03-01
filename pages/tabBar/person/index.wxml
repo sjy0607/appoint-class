@@ -1,0 +1,93 @@
+<!--pages/person/index.wxml-->
+<view  class="bg pt-24">
+  <include src="/components/template/member-top.wxml" />
+  <view>
+      <view class="flex ptb-20">
+        <view class="flex-column flex-middle person-time">
+            <text class="bold size-20">{{times}}</text>
+            <text class="color-gray1 size-12 bt-note">次数</text>
+        </view>
+        <view class="flex-column flex-middle person-time">
+              <text class="bold size-20">{{hours}}</text>
+              <text class="color-gray1 size-12 bt-note">时长</text>
+        </view>
+      </view>
+      
+      <view class="mlr-12 person-order">
+          <view class="flex-between flex">
+              <text class="bold size-16">我的订单</text>
+              <text class="color-gray1 size-12" bindtap="getUserProfile" data-index="0">全部订单></text>
+          </view>
+          <view class="order-status">
+              <view class="flex-column order-item relative" data-index="1" bindtap="getUserProfile">
+                  <image src="/images/person/per_indent_icon_use@3x.png" class="status-img"></image>
+                  <text class="color-gray1 mt-13 size-12">未使用</text>
+                  <view class="number-note" wx:if="{{unusecount}}">
+                      {{unusecount}}
+                  </view>
+              </view>
+              <view class="flex-column order-item goon relative" data-index="2" bindtap="getUserProfile">
+                  <image src="/images/person/per_indent_icon_goon@3x.png" class="status-img"></image>
+                  <text class="color-gray1 mt-13 size-12">进行中</text>
+                  <view class="number-note" wx:if="{{doingcount}}">
+                      {{doingcount}}
+                  </view>
+              </view>
+              <view class="flex-column order-item" data-index="3" bindtap="getUserProfile">
+                  <image src="/images/person/per_indent_icon_finish@3x.png" class="status-img"></image>
+                  <text class="color-gray1 mt-13 size-12">已完成</text>
+              </view>
+          </view>
+         
+      </view>
+      <view class="mlr-12 person-packet mt-13">
+          <view class="flex-between flex">
+              <text class="bold size-16">我的卡包</text>
+              <text class="color-gray1 size-12" bindtap="getUserProfile" data-type="2">全部卡包></text>
+          </view>
+          <view>
+              <view class="flex-between flex mt-12 packet-item {{item.type==0?'small-level':((item.type==1)?'middle-level color':'max-level color')}}" wx:for="{{cardList}}" wx:key data-type="{{item.type}}" bindtap="getUserProfile">
+                  <view>
+                      <text class="bold size-16">{{item.type==0?'SMALL':((item.type==1)?'MIDDLE':'MAX')}}</text>
+                      <view class="size-12 mt-9">
+                          <text>适用教室   {{item.type==0?'小':((item.type==1)?'中':'大')}}</text>
+                      </view>
+                      <view class="hour">可用  <text>{{item.hours}}</text> 小时</view>
+                  </view>
+                  <view>
+                      <image src="{{item.type==0?'/images/person/menber_small_car_logo@3x.png':((item.type==1)?'/images/person/menber_middle_car_logo@3x.png':'/images/person/menber_max_car_logo@3x.png')}}"
+                       class="packet-right"></image>
+                  </view>
+              </view>
+              <!-- <view class="flex-between middle-level flex mt-12 packet-item color">
+                  <view>
+                      <text class="bold size-16">MIDDLE</text>
+                      <view class="size-12 mt-9">
+                          <text>适用教室   中</text>
+                      </view>
+                      <view class="hour">可用    {{middleHour}}小时</view>
+                  </view>
+                  <view>
+                      <image src="/images/person/menber_middle_car_logo@3x.png" class="packet-right"></image>
+                  </view>
+              </view>
+              <view class="flex-between max-level flex mt-12 packet-item color">
+                  <view>
+                      <text class="bold size-16">MAX</text>
+                      <view class="size-12 mt-9">
+                          <text>适用教室   大</text>
+                      </view>
+                      <view class="hour">可用    {{maxHour}}小时</view>
+                  </view>
+                  <view>
+                      <image src="/images/person/menber_max_car_logo@3x.png" class="packet-right"></image>
+                  </view>
+              </view> -->
+          </view>
+      </view>
+  </view>
+</view>
+<!-- <view wx:else class='authorize mask'>
+    <button  class='authorize_btn' bindtap="getUserProfile">请登录</button>
+</view> -->
+

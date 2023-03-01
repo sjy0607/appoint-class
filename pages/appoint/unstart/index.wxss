@@ -1,0 +1,49 @@
+/* pages/appoint/unstart/index.wxss */
+.page-contain{
+  padding:60rpx 72rpx;
+  position: relative;
+}
+.room-type{
+  /* justify-content: center; */
+  align-items: center;
+  display: flex;
+  background-color: #fff;
+  width:606rpx;
+  height:304rpx;
+  flex-direction: column;
+  border-radius: 20rpx;
+  padding-top:40rpx;
+}
+.address{
+  margin:40rpx 0;
+}
+.unstart-time{
+  margin-top: 48rpx;
+  padding:40rpx 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20rpx;
+}
+.interval{
+  background-color: #CCCCCC;
+  width:100%;
+  text-align: center;
+  padding:11rpx 0;
+  color:#999999;
+  /* border-radius: 20rpx; */
+}
+.bottom{
+  margin-top: 60rpx;
+}
+.btn1{
+  border-radius: 50rpx;
+  font-size: 34rpx;
+  padding: 15rpx 51rpx;
+  border: 1px solid #707070;
+  /* margin: 0 !important; */
+  text-align: center;
+  width: 300rpx;
+  width: 300rpx;
+  margin-left: 100rpx;
+}

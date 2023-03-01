@@ -1,0 +1,50 @@
+<!--pages/myorder/index.wxml-->
+<view class="wrap">
+    <view class="flex plb-12">
+      <view wx:for="{{ordertab}}" wx:key>
+          <view bindtap="toggleTab" data-type="{{item.type}}" class="tab {{type==item.type?'active':'noactive'}}">{{item.level}}</view>
+      </view>
+   </view>
+   <view class="mlr-12">
+        <view wx:for="{{orders}}" wx:key class="order-item">
+              <view class="flex-between flex">
+                    <view class="size-12 color-gray1">订单编号：{{item.orderNo}}</view>
+                    <view wx:if="{{item.type==2}}" class="color-yellow size-14">进行中
+                    </view>
+                    <view wx:elif="{{item.type==1}}" class="size-14">未使用
+                    </view>
+                    <view wx:else class="color-gray" class="size-14">已完成
+                    </view>
+              </view>
+              <view class="size-16 bold mtb-16">{{item.title}}</view>
+              <view class="flex">
+                  <view class="width_50">
+                      <view class="color-gray1 size-12">预定日期</view>
+                      <text class="color-gray size-14">{{item.date}}</text>
+                  </view>
+                  <view class="width_50">
+                      <view class="color-gray1 size-12">预定时间</view>
+                      <text class="color-gray size-14">{{item.time}}</text>
+                  </view>
+              </view>
+              <view class="mt-12 address">
+                    <text class="color-gray1 size-12">地址</text>
+                    <view class="color-gray size-14">{{item.address}} 
+                        <text class="color-yellow underline" bindtap="seeMap" data-address="{{item.address}}" data-latitude="{{item.latitude}}" data-longitude="{{item.longitude}}">查看地图</text>
+                    </view>
+              </view>
+              <view class="flex-end flex-column bt">
+                    <view class="flex-middle mtb-16">
+                           <text class="size-14 color-gray1">微信支付</text>
+                           <text class="size-14">{{item.paymentPrice}}</text>
+                    </view>
+                    <view wx:if="{{item.type==1}}" class="flex">
+                        <view class="search" bindtap="cancelOrder" data-id="{{item.id}}">取消订单</view>
+                        <view class="search" bindtap="toUse" data-id="{{item.id}}">去使用</view>
+                    </view>
+                    <view wx:elif="{{item.type==2}}" class="search" bindtap="toScan" data-id="{{item.id}}">去查看</view>
+                    <view wx:else class="search" bindtap="deleteOrder" data-id="{{item.id}}">删除订单</view>
+              </view>
+        </view>
+   </view>
+</view>

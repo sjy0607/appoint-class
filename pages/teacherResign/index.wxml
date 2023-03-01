@@ -1,0 +1,27 @@
+<!--pages/teacherResign/index.wxml-->
+<view>
+    <view class="mlr-12 flex-between flex field">
+        <view class="color-gray">姓名</view>
+        <view>
+           <input class="input"  bindinput="getNameValue" placeholder="请输入姓名" />
+        </view>
+    </view>
+    <view class="mlr-12 flex-between flex field">
+        <view class="color-gray">手机号码</view>
+        <view>
+           <input class="input"  bindinput="getPhoneNumber" placeholder="请输入手机号码" />
+        </view>
+    </view>
+    <view class="mlr-12 color-gray">
+      <view class="itr">介绍</view>
+      <view class="textarea">
+        <textarea bindinput="getIntroduction" placeholder="您可以在这里写下您自我介绍，方便招聘者更了解您~" auto-focus auto-height/>
+      </view>
+    </view>
+    <view>
+        <view class="submit" bindtap="submit">
+          确认提交
+        </view>
+
+    </view>
+</view>

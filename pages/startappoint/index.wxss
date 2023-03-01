@@ -1,0 +1,107 @@
+/* pages/startappoint/index.wxss */
+.room-name{
+  padding:24rpx;
+}
+.scroll-view {
+  /* height: 200rpx; */
+  /* background-color: #313751; */
+  width: 100%;
+  white-space: nowrap;
+}
+.swipper{
+ height:550rpx !important;
+}
+.item {
+  width:108rpx;
+  height:130rpx;
+  display: inline-block;
+  background-color: #f3f3f3;
+  color:black;
+  margin-right: 16rpx;
+  padding:24rpx 0
+}
+.text-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  /* color: #fff; */
+}
+.month {
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
+.week {
+  font-size: 32rpx;
+  margin-top: 10rpx;
+}
+.day {
+  font-size: 32rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 60rpx;
+  margin-top: 20rpx;
+}
+/* 日期选中的样式 */
+.day-active {
+  background-color: #333333;
+  color: #fff;
+}
+.appoint-time{
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width:218rpx; */
+  /* height:210rpx; */
+  position: relative;
+  margin-top:40rpx;
+  border-radius: 20rpx;
+  padding:17rpx 45rpx 20rpx 45rpx;
+  /* float: left; */
+  margin-left: 30rpx;
+}
+.close{
+  width:32rpx;
+  height:32rpx;
+  top:-16rpx;
+  right:-16rpx;
+  position: absolute;
+}
+.submit{
+  width:626rpx;
+  border-radius: 50rpx;
+  padding:26rpx 0;
+  /* padding:26rpx 241rpx; */
+  color:#ffffff;
+  background-color:#333333 ;
+  /* display: flex;
+  justify-items: center; */
+  text-align: center;
+  /* position: fixed;
+  /* bottom: 32rpx; */
+  margin-left:50%;
+  margin-bottom: 67rpx;
+  margin-top:60rpx ;
+  transform: translateX(-50%);
+}
+.disable-style{
+  background-color: #999999;
+  color:#CCCCCC;
+}
+.time-interval{
+  /* width:218rpx; */
+  /* height:137rpx; */
+  /* width:26%; */
+  border:1px solid #999999;
+  border-radius: 20rpx;
+  padding:16rpx 0;
+  width:218rpx;
+  text-align: center;
+  margin-right: 10rpx;
+  margin-top: 10rpx;
+}

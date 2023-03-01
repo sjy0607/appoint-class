@@ -1,0 +1,18 @@
+<!--pages/dancelist/index.wxml-->
+<view class="wrap dance-item">
+  <view wx:for="{{dancelist}}" wx:key class="relative" bindtap="toDanceDetail" data-id="{{item.id}}">
+      <image src="{{item.imgUrl}}" class="dance-img" mode="center"></image>
+      <view class="flex-column list-btm">
+          <view class="color size-16">
+            {{item.title}}
+          </view>
+          <view class="color size-12 mtop_8">
+            {{item.address}}
+          </view>
+      </view>
+  </view>
+  <view wx:if="{{!dancelist.length}}" class="center">
+      没有舞蹈教室
+  </view>
+  <!-- <view class="size-12 color-gray1 text-center ptb-16" wx:if="{{isBottom}}">没有舞蹈教室</view> -->
+</view>

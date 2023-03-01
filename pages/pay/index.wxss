@@ -1,0 +1,59 @@
+/* pages/pay/index.wxss */
+.appoint{
+  padding:40rpx 24rpx;
+  display: flex;
+  flex-direction: column;
+}
+.appoint-time{
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width:218rpx;
+  height:210rpx; */
+  position: relative;
+  margin-top:40rpx;
+  padding:17rpx 45rpx 20rpx 45rpx;
+  border-radius: 20rpx;
+  float: left;
+  margin-left: 30rpx;
+}
+.close{
+  width:32rpx;
+  height:32rpx;
+  top:-16rpx;
+  right:-16rpx;
+  position: absolute;
+}
+.pay-icon{
+  width:46rpx;
+  height:46rpx;
+}
+.btm-appoint{
+  background-color: #fff;
+  /* position: fixed; */
+  bottom: 0;
+  /* padding: 16rpx 0; */
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  padding: 16rpx 0;
+}
+.pay{
+  background-color: #333;
+  font-size: 36rpx;
+  padding: 26rpx 138rpx;
+  color: #fff;
+  border-radius: 50rpx;
+  /* margin-right: 24rpx; */
+  margin-right: 24rpx;
+}
+.checkbox{
+  border-radius: 100rpx;
+  border: 1px solid #e0e0e0;
+  background: transparent;
+  width:50rpx;
+  height:50rpx;
+  /* background-color: #333; */
+}

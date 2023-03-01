@@ -1,0 +1,27 @@
+<view class="member-top mlr-12">
+      <view class="flex-middle">
+          <view>
+            <image src="{{avatarUrl||'/images/member/member_img_denglu@3x.png'}}" class="avatar"></image>
+          </view>
+          <view class="flex-between flex1 mlef-12">
+            <view class="flex-column">
+              <text class="bold size-18" wx:if="{{username!=='微信用户'}}">{{username}}</text>
+              <button class="member-note mtop_10 text-center" bindtap="getUserProfile">{{levelName||'点击登录'}}</button>
+            </view>
+            <view>
+                <image src="/images/member/member_img_logo@3x.png" class="member-righ"></image>
+            </view>
+          </view>
+      </view>
+      <view>
+          <text class="size-12 color-gray">当前成长值  {{growthValue}}</text>
+          <view class="mt-2">
+            <progress percent="{{nextLevelPercent}}"  stroke-width="3" color="#333333" backgroundColor="#999999"/>
+          </view>
+          <view class="flex-between flex size-12 mtop_8">
+              <text>{{levelName}}</text>
+              <text>{{nextLevelName}}</text>
+          </view>
+          
+      </view>
+</view>

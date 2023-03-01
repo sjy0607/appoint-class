@@ -1,0 +1,76 @@
+<!--pages/room/index.wxml-->
+<view class="wrap">
+    <view class="room-tab flex mlr-12">
+      <view wx:for="{{tabs}}" wx:key>
+          <view bindtap="toggleRoom" data-type="{{item.type}}" class="tab {{type==item.type?'active':'noactive'}}">{{item.level}}</view>
+      </view>
+   </view>
+   <view>
+        <view wx:if="{{type==2}}" class="mlr-12">   
+            <view class="rooms max" wx:for="{{list}}" wx:key>
+              <image src="/images/rooms/class_max_car_logo@2x.png" class="room-img"></image>
+              <view class="flex-between flex color">
+                    <view>
+                          <view class="color size-16">MAX</view>
+                          <view>
+                              <text class="size-12">适用教室   大</text>
+                          </view>
+                    </view>
+                    <!-- <view class="color">￥{{item.price}}</view> -->
+              </view>
+              <view class="flex-between flex color room-btm size-12">
+                    <view>可用  <text class="size-14">{{item.hours}}</text>小时</view>
+                    <view class="color-gray1 text-right">
+                      <view>有限期至{{item.expiresTime}}</view>
+                      <!-- <view class="mt-2">购买成功后12个月内有效</view> -->
+                    </view>
+
+                </view>
+            </view>
+        </view>
+        <view wx:elif="{{type==1}}" class="mlr-12">
+            <view class="rooms middle" wx:for="{{list}}" wx:key>
+                <image src="/images/rooms/class_middle_car_logo@3x.png" class="room-img"></image>
+                <view class="flex-between flex color">
+                      <view>
+                            <view class="color size-16">MIDDLE</view>
+                            <view>
+                                <text class="size-12">适用教室  中</text>
+                            </view>
+                      </view>
+                      <!-- <view class="color">￥{{item.price}}</view> -->
+                  </view>
+                  <view class="flex-between flex color room-btm size-12">
+                      <view>可用  <text class="size-14">{{item.hours}}</text>小时</view>
+                      <view class="color text-right">
+                        <view>有限期至{{item.expiresTime}}</view>
+                        <!-- <view class="mt-2">购买成功后12个月内有效</view> -->
+                      </view>
+                  </view>
+            </view>
+        </view>
+        <view wx:else class="mlr-12">
+            <view class="rooms small" wx:for="{{list}}" wx:key>
+                  <image src="/images/rooms/class_small_car_logo@3x.png" class="room-img"></image>
+                  <view class="flex-between flex color-gray">
+                      <view>
+                            <view class="bold size-16">SMALL</view>
+                            <view>
+                                <text class="size-12">适用教室  小</text>
+                            </view>
+                      </view>
+                      <!-- <view class="bold">￥{{item.price}}</view> -->
+                  </view>
+                  <view class="flex-between flex color room-btm size-12">
+                      <view class="color-gray1">可用 <text class="size-14">{{item.hours}}</text>小时</view>
+                      <view class="color-gray text-right">
+                        <view>有限期至{{item.expiresTime}}</view>
+                        <!-- <view class="mt-2">购买成功后12个月内有效</view> -->
+                      </view>
+                  </view>
+          </view>
+        </view>
+   </view>
+  
+</view>
+

@@ -1,0 +1,14 @@
+/* pages/dancelist/index.wxss */
+.dance-item{
+  padding:24rpx;
+}
+.dance-img{
+  height:280rpx;
+  width:712rpx;
+  border-radius: 40rpx;
+}
+.list-btm{
+  position: absolute;
+  bottom: 32rpx;
+  left:32rpx;
+}

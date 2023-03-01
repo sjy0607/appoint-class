@@ -1,0 +1,56 @@
+<!--pages/dancedetail/index.wxml-->
+<view class="wrap">
+    <view class="page-body relative">
+      <video src="{{info.videoUrl}}" class="swipper" wx:if="{{info.videoUrl&&currentIndex==0}}"></video>
+      <swiper indicator-dots="{{indicatorDots}}" indicator-color="#BDC4CE" indicator-active-color="#ffffff"
+        autoplay="{{autoplay}}" class="swipper" wx:else>
+        <block wx:for="{{info.imgUrls}}" wx:key>
+          <swiper-item>
+            <image src="{{item}}" style="width:100%" mode="widthFix"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="switch-button" wx:if="{{info.videoUrl&&info.imgUrls.length}}">
+        <view class="flex">
+            <view class="switch {{currentIndex==0?'active':''}}" bindtap="switchChange" data-index="0">视频</view>
+            <view class="switch {{currentIndex==1?'active':''}}" bindtap="switchChange" data-index="1">图片</view>
+        </view>
+      </view>
+    </view>
+    <view class="mlr-12 pt-12">
+          <view class="pall flex">
+              <view class="icon-left size-16">
+              {{info.address}}
+                <!-- 广东省深圳市福田区海松大厦B座222 （从大夏边界的阶梯进入二... -->
+              </view>
+              <view class="flex-between flex1">
+                  <!-- <view> -->
+                      <image src="/images/rooms/dancepar_icon_addre@3x.png" class="icon-righ" bindtap="toMap"></image>
+                  <!-- </view>
+                  <view> -->
+                      <image src="/images/rooms/dancepar_icon_phone@3x.png" class="icon-righ" bindtap="makeCall"></image>
+                  <!-- </view> -->
+              </view>
+          </view>
+          <view class="practice flex-between mtb-12">
+              <view>
+                  <view class="bold size-16 color-gray">练习室预约</view>
+                  <text class="size-12 color-gray1">Make your order~</text>
+              </view>
+              <view>
+                  <button class="appoint" bindtap="appointRom">立即预约</button>
+              </view>
+          </view>
+          <view class="practice flex-between">
+              <view>
+                  <view class="bold size-16 color-gray">场地介绍</view>
+                  <text class="size-12 color-gray1">24小时营业~</text>
+              </view>
+          </view>
+          <!-- <view class="method mt-12">
+                <view class="size-16 color-gray bold">使用指南</view>
+                <image src="/images/rooms/dancepar_guide_img@3x.png" class="method-img"></image>
+          </view> -->
+   </view>
+    
+</view>

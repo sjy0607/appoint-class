@@ -1,0 +1,8 @@
+<!--pages/submit/success/index.wxml-->
+<view class="wrap center">
+    <view>
+        <image src="/images/order_empty_succeed@3x.png" class="tip-img"></image>
+        <view class="color-gray tip">预约消息已发送给老师 等待回复</view>
+        <view class="tip-button">返回</view>
+    </view>
+</view>

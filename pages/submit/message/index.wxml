@@ -1,0 +1,37 @@
+<!--pages/submit/message/index.wxml-->
+<view class="wrap">
+    <view class="msg-top flex-middle">
+        <view>
+            <image src="{{avatar}}" style="width:90rpx;height:90rpx"></image>
+        </view>
+        <view class="mlef-18">
+              <view class="color-gray size-16 bold">{{name}}</view>
+              <view class="color-gray2 size-12 mtop_16">已被预约 {{times}} 次</view>
+        </view>
+    </view>
+    <form bindsubmit='loginForm'>
+
+      
+    </form>
+    <view class="msg-contain">
+      <view class="flex flex-between bb ptb-16">
+        <view class="size-16 color-gray">预约人数</view>
+        <view class="flex flex-end">
+            <input type="text" bindinput='getNumberValue' placeholder="请输入预约人数" class="text-right" ></input>
+            <text>人</text>
+        </view>
+      </view>
+      <view class="flex flex-between bb  ptb-16">
+          <view class="size-16 color-gray">手机号码</view>
+          <view>
+              <input class="text-right" bindinput='getPhoneValue' type="text" placeholder="请输入手机号码" ></input>
+          </view>
+      </view>
+      <view>
+          <view class="ptb-16">备注</view>
+          <textarea class="text" id="" bindinput='getNotesValue' cols="30" rows="10" placeholder="您可以在这里写下您的预约" ></textarea>
+      </view>
+      <view class="go-submit mt-12 mlef-18" bindtap="submit">确认提交</view>
+    </view>
+    
+</view>

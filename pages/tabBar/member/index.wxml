@@ -1,0 +1,41 @@
+<!--pages/member/index.wxml-->
+<view class="bg pt-24">
+  <include src="/components/template/member-top.wxml" />
+  
+  
+    <view class="member-constr">
+      <!-- <view> -->
+        <view class="size-18 bold ptb-20 mlr-12">升级途径</view>
+        <view wx:for="{{rules}}" wx:key class="flex constr-item">
+            <view class="flex-middle">
+                <image src="{{item.url}}" class="constr-icon"></image>
+            </view>
+            <view class="flex-between flex1 flex-middle">
+              <view class="mlef-12 bold">{{item.name}}</view>
+              <button data-id="{{item.id}}" class="btn btn1" bindtap="getUserProfile" >{{item.id==3?'去购买':'去预约'}}</button>
+            </view>
+            
+
+        </view>
+    </view>
+    <view class="member-activity">
+      <view>
+        <view class="size-18 bold ptb-20 mlr-12">会员活动</view>
+        <view wx:for="{{activityList}}" wx:key>
+            <view class="flex relative act-item">
+                <view class="act-tab">活动{{index+1}}</view>
+                <view>
+                    <image src="{{item.imgUrl}}" class="act-img"></image>
+                </view>
+                <view class="flex-column act-right">
+                    <text class="title bold">{{item.title}}</text>
+                    <text class="desc">{{item.content}}</text>
+                    <!-- <text class="desc">{{item.desc}}</text> -->
+                    <text class="rule">具体活动由练习室规定</text>
+                </view>
+            </view>
+        </view>
+     </view>
+  </view>
+  <!-- </view> -->
+</view>

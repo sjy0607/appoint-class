@@ -1,0 +1,50 @@
+<!--pages/cardsDiscount/index.wxml-->
+<view class="wrap bg-white" wx:if="{{cardList.length}}">
+      <view>
+        <view class="plr-12">
+               <view>
+                  <radio-group bindchange="radioChange">
+                      <label class="center" wx:for="{{cardList}}" wx:key="{{item.value}}">
+                        
+                        <view>
+                           <view class="rooms {{item.type==0?'small':((item.type==1)?'middle':'max')}}">
+                              <image src="{{item.type==0?'/images/rooms/class_small_car_logo@3x.png':((item.type==1)?'/images/rooms/class_middle_car_logo@3x.png':'/images/rooms/class_max_car_logo@2x.png')}}" class="room-img"></image>
+                              <view class="flex-between flex color">
+                                    <view>
+                                          <view class="color size-16 {{item.type==0?'color-gray':'color'}}">{{item.type==0?'SMALL':((item.type==1)?'MIDDLE':'MAX')}}</view>
+                                          <view>
+                                              <text class="size-12 {{item.type==0?'color-gray':'color'}}">适用教室   {{item.type==0?'小':((item.type==1)?'中':'大')}}</text>
+                                          </view>
+                                    </view>
+                              </view>
+                              <view class="flex-between flex color room-btm size-12">
+                                    <view class="{{item.type==0?'color-gray':'color'}}">可用  <text class="size-14">{{item.hours}}</text>小时</view>
+                                    <view class="color-gray1 text-right">
+                                      <view class="{{item.type==0?'color-gray1':'color'}}">有限期至{{item.expiresTime}}</view>
+                                      <!-- <view class="mt-2">购买成功后{{item.expiresDays}}天有效</view> -->
+                                    </view>
+
+                                </view>
+                          </view>
+                        </view>
+                        <view class="weui-cell__hd">
+                          <radio value="{{item.id}}" checked="true" color="#333333"/>
+                        </view>
+                      </label>
+                  </radio-group>
+               </view>
+             
+        </view>
+        <view class="center">
+            <view class="flex mtb-12">
+                        <view class="btm" bindtap="cancel">不使用次卡</view>
+                        <view class="btm active mlef-12" bindtap="confirm">确定</view>
+            </view>
+        </view>
+      </view>
+      
+</view>
+<view  class="flex-middle bg-white flex-column" wx:else>
+      <image src="/images/order_empty@3x.png" class="tip-img"></image>
+      <view class="tip-button" bindtap="toPurchase">去购买</view>
+</view>

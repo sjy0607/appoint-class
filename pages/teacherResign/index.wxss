@@ -1,0 +1,32 @@
+/* pages/teacherResign/index.wxss */
+.field{
+  border-bottom: 1px solid #CCCCCC;
+  padding:32rpx 0;
+}
+.textarea{
+  height:225rpx;
+  background-color:#F7F7F7;
+  /* padding:32rpx 20rpx; */
+  padding:32rpx 10rpx;
+}
+.itr{
+  margin:32rpx 0;
+}
+.input{
+  text-align: right;
+}
+.submit{
+  width:626rpx;
+  border-radius: 50rpx;
+  padding:26rpx 0;
+  /* padding:26rpx 241rpx; */
+  color:#ffffff;
+  background-color:#333333 ;
+  /* display: flex;
+  justify-items: center; */
+  text-align: center;
+  position: fixed;
+  bottom: 32rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
